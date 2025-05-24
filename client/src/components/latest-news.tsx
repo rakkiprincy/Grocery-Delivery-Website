@@ -6,7 +6,7 @@ export function LatestNews() {
     {
       title: "FreshCart Expands to 10 New Cities Across India",
       excerpt: "We're excited to announce our expansion to Hyderabad, Chennai, Kolkata, and 7 other major cities, bringing fresh groceries closer to more Indian families.",
-      date: "March 15, 2024",
+      date: "March 15, 2025",
       author: "FreshCart Team",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       category: "Company News"
@@ -14,7 +14,7 @@ export function LatestNews() {
     {
       title: "Organic Farming Partnerships: Supporting Local Farmers",
       excerpt: "Learn how FreshCart is directly partnering with organic farmers across Maharashtra and Karnataka to bring you the freshest produce while supporting local agriculture.",
-      date: "March 10, 2024",
+      date: "March 10, 2025",
       author: "Sustainability Team",
       image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       category: "Sustainability"
@@ -22,7 +22,7 @@ export function LatestNews() {
     {
       title: "New Mobile App Features: Smart Shopping Lists & More",
       excerpt: "Discover the latest features in our mobile app including AI-powered shopping suggestions, recurring orders, and improved delivery tracking.",
-      date: "March 5, 2024",
+      date: "March 5, 2025",
       author: "Product Team",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       category: "Technology"

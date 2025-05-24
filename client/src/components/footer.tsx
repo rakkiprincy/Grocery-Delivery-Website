@@ -81,7 +81,7 @@ export function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0">
-              <p>&copy; 2024 FreshCart Technologies Pvt. Ltd. All rights reserved.</p>
+              <p>&copy; 2025 FreshCart Technologies Pvt. Ltd. All rights reserved.</p>
             </div>
             <div className="flex items-center space-x-6 text-gray-400 text-sm">
               <span>Made in India 🇮🇳</span>

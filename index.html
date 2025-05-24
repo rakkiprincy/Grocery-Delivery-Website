@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart - Premium Fresh Groceries Delivered Fast</title>
+    <meta name="description" content="Experience the finest quality produce, dairy, and essentials delivered fresh to your doorstep across 50+ Indian cities in just 30 minutes.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide via CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <i data-lucide="shopping-cart" class="logo-icon"></i>
+                    <h1 class="logo-text">FreshCart</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#hero" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#why-choose" class="nav-link">Why Choose Us</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <div class="nav-dropdown">
+                        <span class="nav-link">More</span>
+                        <div class="dropdown-content">
+                            <a href="#portfolio" class="dropdown-link">Portfolio</a>
+                            <a href="#news" class="dropdown-link">News</a>
+                            <a href="#products" class="dropdown-link">Products</a>
+                            <a href="#contact" class="dropdown-link">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search for groceries..." class="search-input">
+                    <i data-lucide="search" class="search-icon"></i>
+                </div>
+
+                <!-- Cart & Profile -->
+                <div class="header-actions">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="signin-btn">
+                        <i data-lucide="user"></i>
+                        Sign In
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" id="mobileMenuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+                <a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
+                <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
+                <a href="#why-choose" class="mobile-nav-link" onclick="closeMobileMenu()">Why Choose Us</a>
+                <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Testimonials</a>
+                <a href="#portfolio" class="mobile-nav-link" onclick="closeMobileMenu()">Portfolio</a>
+                <a href="#news" class="mobile-nav-link" onclick="closeMobileMenu()">News</a>
+                <a href="#products" class="mobile-nav-link" onclick="closeMobileMenu()">Products</a>
+                <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile Search -->
+        <div class="mobile-search">
+            <input type="text" placeholder="Search for groceries..." class="mobile-search-input">
+            <i data-lucide="search" class="mobile-search-icon"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-pattern">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+            <div class="floating-circle circle-4"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <!-- Badge -->
+                    <div class="hero-badge">
+                        <i data-lucide="star"></i>
+                        #1 Grocery Delivery in India
+                    </div>
+                    
+                    <!-- Main Heading -->
+                    <h1 class="hero-title">
+                        <span class="title-line animate-slide-up">Premium</span>
+                        <span class="title-line animate-slide-up delay-200">Fresh Groceries</span>
+                        <span class="title-line highlight animate-slide-up delay-400">Delivered Fast</span>
+                    </h1>
+                    
+                    <!-- Description -->
+                    <p class="hero-description animate-slide-up delay-600">
+                        Experience the finest quality produce, dairy, and essentials delivered fresh to your doorstep across 50+ Indian cities in just 30 minutes.
+                    </p>
+                    
+                    <!-- Features -->
+                    <div class="hero-features animate-slide-up delay-800">
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>30-Min Delivery</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Fresh Guarantee</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Free Delivery ₹999+</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="hero-buttons animate-slide-up delay-1000">
+                        <button class="btn btn-primary" onclick="scrollToProducts()">
+                            Start Shopping Now
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i data-lucide="play"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hero Images -->
+                <div class="hero-images">
+                    <div class="hero-image-container animate-float">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500" alt="Fresh groceries and produce">
+                        </div>
+                        
+                        <!-- Floating Cards -->
+                        <div class="floating-card delivery-card">
+                            <div class="card-value">30min</div>
+                            <div class="card-label">Delivery</div>
+                        </div>
+                        
+                        <div class="floating-card rating-card">
+                            <div class="rating-content">
+                                <i data-lucide="star"></i>
+                                <span class="card-value">4.8</span>
+                            </div>
+                            <div class="card-label">Rating</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Secondary Images -->
+                    <div class="secondary-image-1 animate-float-delay">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400" alt="Fresh vegetables">
+                    </div>
+                    
+                    <div class="secondary-image-2 animate-float-delay-2">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Fresh fruits">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Bar -->
+            <div class="hero-stats animate-slide-up delay-1200">
+                <div class="stat-item">
+                    <div class="stat-value">1M+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Cities Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">10M+</div>
+                    <div class="stat-label">Orders Delivered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">30min</div>
+                    <div class="stat-label">Avg Delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About FreshCart</h2>
+                <p class="section-description">
+                    Founded in 2020, FreshCart has been revolutionizing grocery delivery across India, 
+                    bringing farm-fresh produce and quality essentials directly to your doorstep.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>
+                        Started by a team of passionate entrepreneurs who believed that everyone deserves access 
+                        to fresh, quality groceries without the hassle of traditional shopping. We've built 
+                        strong partnerships with local farmers and trusted suppliers across India.
+                    </p>
+                    <p>
+                        Today, we serve over 50 cities and have delivered millions of orders, maintaining our 
+                        commitment to freshness, quality, and customer satisfaction.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Our team at work">
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div class="about-stat">
+                    <div class="stat-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-text">Happy Customers</div>
+                </div>
+                <div class="about-stat">
+                    <div class="stat-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Cities Served</div>
+                </div>
+                <div class="about-stat">
+                    <div class="stat-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <div class="stat-number">99%</div>
+                    <div class="stat-text">Customer Satisfaction</div>
+                </div>
+                <div class="about-stat">
+                    <div class="stat-icon">
+                        <i data-lucide="truck"></i>
+                    </div>
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-text">Orders Delivered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-description">
+                    Comprehensive grocery delivery solutions designed to make your shopping experience 
+                    seamless, convenient, and reliable.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>30-Minute Delivery</h3>
+                    <p>Lightning-fast delivery service that brings your groceries to your doorstep in just 30 minutes.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon green">
+                        <i data-lucide="shield"></i>
+                    </div>
+                    <h3>Quality Guarantee</h3>
+                    <p>100% fresh guarantee on all products. If you're not satisfied, we'll replace or refund immediately.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon purple">
+                        <i data-lucide="truck"></i>
+                    </div>
+                    <h3>Free Delivery</h3>
+                    <p>Enjoy free delivery on orders above ₹999. No hidden charges, transparent pricing always.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon orange">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support to help you with orders, queries, and assistance anytime.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon red">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>Multiple payment options with bank-grade security. Pay with UPI, cards, or cash on delivery.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon teal">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <h3>Organic Selection</h3>
+                    <p>Curated selection of organic and locally-sourced products for health-conscious customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose" class="why-choose">
+        <div class="container">
+            <div class="why-choose-content">
+                <div class="why-choose-text">
+                    <h2>Why Choose FreshCart?</h2>
+                    <p class="intro-text">
+                        We're not just another grocery delivery service. We're your trusted partner 
+                        in bringing convenience, quality, and freshness to your daily life.
+                    </p>
+                    
+                    <div class="reasons-list">
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i data-lucide="star"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Premium Quality</h3>
+                                <p>Hand-picked fresh produce and premium brands sourced directly from trusted suppliers and local farms.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Lightning Fast</h3>
+                                <p>Industry-leading delivery speed with most orders reaching you within 30 minutes of placing the order.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i data-lucide="check-circle"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Reliable Service</h3>
+                                <p>99.9% on-time delivery rate with real-time tracking and proactive communication throughout.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i data-lucide="thumbs-up"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Customer First</h3>
+                                <p>Dedicated customer support team and hassle-free returns to ensure your complete satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-choose-image">
+                    <img src="https://images.unsplash.com/photo-1655659297320-687b53ff70ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fresh groceries and happy customers">
+                    <div class="rating-badge">
+                        <div class="rating-stars">4.8★</div>
+                        <div class="rating-text">Customer Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-description">
+                    Browse our fresh selection of premium groceries, all available for 30-minute delivery.
+                </p>
+            </div>
+
+            <!-- Category Navigation -->
+            <div class="category-nav">
+                <button class="category-btn active" data-category="all">All Products</button>
+                <button class="category-btn" data-category="produce">
+                    <i data-lucide="apple"></i>
+                    Produce
+                </button>
+                <button class="category-btn" data-category="dairy">
+                    <i data-lucide="milk"></i>
+                    Dairy
+                </button>
+                <button class="category-btn" data-category="meat">
+                    <i data-lucide="beef"></i>
+                    Meat
+                </button>
+                <button class="category-btn" data-category="pantry">
+                    <i data-lucide="package"></i>
+                    Pantry
+                </button>
+                <button class="category-btn" data-category="frozen">
+                    <i data-lucide="snowflake"></i>
+                    Frozen
+                </button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="cart-close" onclick="toggleCart()">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <span>Add some products to get started</span>
+                </div>
+            </div>
+            
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total: </span>
+                    <span class="total-amount" id="totalAmount">₹0</span>
+                </div>
+                <button class="checkout-btn" onclick="showCheckout()">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-description">
+                    Have questions about our service? Need support with your order? We're here to help! 
+                    Contact our friendly customer support team.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone Support</h4>
+                            <p>+91 1800-123-4567</p>
+                            <p>+91 1800-765-4321</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Support</h4>
+                            <p>support@freshcart.in</p>
+                            <p>orders@freshcart.in</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Head Office</h4>
+                            <p>FreshCart Technologies Pvt. Ltd.</p>
+                            <p>Old Bustand, Tirupur City,</p>
+                            <p>Coimbatore 641665</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Support Hours</h4>
+                            <p>24/7 Customer Support</p>
+                            <p>Delivery: 6:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                            <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
+                        
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" placeholder="Tell us how we can help you..." rows="5" required></textarea>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i data-lucide="shopping-cart"></i>
+                        <h3>FreshCart</h3>
+                    </div>
+                    <p>India's fastest growing grocery delivery platform. Fresh groceries delivered to your door in 30 minutes across 50+ cities.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Shop Categories</h4>
+                    <ul>
+                        <li><a href="#">Fresh Vegetables & Fruits</a></li>
+                        <li><a href="#">Dairy Products & Eggs</a></li>
+                        <li><a href="#">Meat & Seafood</a></li>
+                        <li><a href="#">Pantry & Staples</a></li>
+                        <li><a href="#">Organic & Health Foods</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Help & FAQ</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Return & Refund Policy</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <div class="contact-info">
+                        <p><i data-lucide="phone"></i> +91 1800-123-4567</p>
+                        <p><i data-lucide="mail"></i> support@freshcart.in</p>
+                        <p><i data-lucide="map-pin"></i> Tirupur City, Coimbatore</p>
+                        <p><i data-lucide="clock"></i> 24/7 Customer Support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 FreshCart Technologies Pvt. Ltd. All rights reserved.</p>
+                <div class="footer-links">
+                    <span>Made in India 🇮🇳</span>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
